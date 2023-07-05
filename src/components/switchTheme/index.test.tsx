@@ -45,7 +45,7 @@ describe("Test SwitchTheme component", () => {
 
   describe("Should switch background-color correctly.", () => {
     it("White theme for background-color.", () => {
-      expect(appElem.getByTestId("main")).toHaveStyleRule("background-color", `${Themes.light.backgroundColor}`);
+      expect(appElem.getByTestId("main")).toHaveStyleRule("background-color", `${Themes.light.background_color}`);
     });
 
     it("Dark theme for background-color.", () => {
@@ -54,7 +54,7 @@ describe("Test SwitchTheme component", () => {
       // Simulate click for switch theme to dark.
       fireEvent.click(SwitchElem);
 
-      expect(appElem.getByTestId("main")).toHaveStyleRule("background-color", `${Themes.dark.backgroundColor}`);
+      expect(appElem.getByTestId("main")).toHaveStyleRule("background-color", `${Themes.dark.background_color}`);
     });
   });
 });

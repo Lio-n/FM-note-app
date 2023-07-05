@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { useSwitchTheme } from "./lib/hooks";
 
 const Main = styled.main`
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.background_color};
 `;
 
 function App() {
