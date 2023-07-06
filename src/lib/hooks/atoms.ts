@@ -1,5 +1,6 @@
 import { RecoilState, atom } from "recoil";
 import { recoilPersist } from "recoil-persist";
+import toggleDataTheme from "../../utils/toggleDataTheme.utils";
 
 const { persistAtom } = recoilPersist();
 
@@ -11,7 +12,7 @@ const notesState = atom({
 
 const themeState: RecoilState<boolean> = atom({
   key: "themePalette",
-  default: true, // true ? dark : light
+  default: toggleDataTheme() === "light" ? true : false, // true ? light : dark
 });
 
 export { notesState, themeState };
