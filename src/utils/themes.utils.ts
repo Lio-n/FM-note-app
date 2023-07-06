@@ -11,6 +11,8 @@ interface CustomTheme extends InitTheme {
   font_color_100: string;
   font_color_200: string;
   font_color_300: string;
+  background_image_mobile: string;
+  background_image_desktop: string;
 }
 
 interface ThemesAvailable {
@@ -28,6 +30,8 @@ const LightTheme: CustomTheme = {
   ...BasicTheme,
   layout_color: "rgb(239, 239, 239)",
   background_color: "rgb(238, 235, 234)",
+  background_image_mobile: "./src/assets/background/bg-mobile-light.jpg",
+  background_image_desktop: "./src/assets/background/bg-desktop-light.jpg",
   border_color: "rgb(233, 235, 233)",
   font_color_100: "rgb(119, 124, 127)", // Body
   font_color_200: "rgb(238, 235, 234)", // line-through
@@ -38,6 +42,8 @@ const DarkTheme: CustomTheme = {
   ...BasicTheme,
   layout_color: "rgb(60, 62, 49)",
   background_color: "rgb(29, 30, 28)",
+  background_image_mobile: "./src/assets/background/bg-mobile-dark.jpg",
+  background_image_desktop: "./src/assets/background/bg-desktop-dark.jpg",
   border_color: "rgb(88, 84, 80)",
   font_color_100: "rgb(216, 219, 217)", // Body
   font_color_200: "rgb(61, 66, 64)", // line-through
