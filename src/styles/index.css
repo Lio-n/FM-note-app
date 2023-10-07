@@ -10,6 +10,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --clr-pink: hsl(280, 87%, 65%);
+  --clr-sky-blue: hsl(192, 100%, 67%);
 }
 
 * {
