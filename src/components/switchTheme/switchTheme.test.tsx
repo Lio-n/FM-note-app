@@ -2,7 +2,7 @@ import { RenderResult, fireEvent, render } from "../../utils/test.utils";
 import App from "../../App.tsx";
 import Themes from "../../utils/themes.utils.ts";
 import { RecoilRoot } from "recoil";
-import CONSTANTS from "../../test/constants.test.ts";
+import CONSTANTS from "../../test/constants";
 
 const TEST_ID_SWITCH_THEME = CONSTANTS.COMPONENT.SWITCH_THEME.TEST_ID_SWITCH_THEME;
 const ID_SUN_ICON = "#sunIcon";

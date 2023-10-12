@@ -4,14 +4,23 @@ import { CrossIcon } from "../../atoms/icons/cross.icon";
 
 const Root = styled.button`
   border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      stroke: ${({ theme }) => theme.border_color};
+    }
+  }
 `;
 
-interface CrossButtonProps {
-  props?: ButtonHTMLAttributes<HTMLButtonElement>;
+interface CrossButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  arialLabel?: string;
 }
 
-export const CrossButton = ({ props }: CrossButtonProps) => (
-  <Root aria-label={`cross button`} {...props}>
+export const CrossButton = ({ arialLabel = `cross button`, ...props }: CrossButtonProps) => (
+  <Root id="CrossButton" aria-label={arialLabel} {...props}>
     <CrossIcon />
   </Root>
 );

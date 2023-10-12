@@ -1,7 +1,7 @@
 import { RenderResult, render } from "../../utils/test.utils";
 import { RecoilRoot } from "recoil";
 import Header from "./index.tsx";
-import CONSTANTS from "../../test/constants.test.ts";
+import CONSTANTS from "../../test/constants";
 
 const TEST_ID_HEADER = CONSTANTS.COMPONENT.HEADER.TEST_ID_HEADER;
 const TEST_ID_SWITCH_THEME = CONSTANTS.COMPONENT.SWITCH_THEME.TEST_ID_SWITCH_THEME;
@@ -26,6 +26,11 @@ describe("Test Header component", () => {
   it("should contains the SwitchTheme component", () => {
     const switchElem = appElem.getByTestId(TEST_ID_SWITCH_THEME);
     expect(switchElem).toBeInTheDocument();
+  });
+
+  it("should contains the text Title 'TODO'", () => {
+    const titleElem = appElem.getByText("TODO");
+    expect(titleElem).toBeInTheDocument();
   });
 
   it("should contains the ToDoForm component", () => {

@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 const Root = styled.button`
   border-radius: 50%;
+  background: transparent;
   border: solid 2px ${({ theme }) => theme.border_color};
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 `;
 

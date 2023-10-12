@@ -2,15 +2,17 @@ interface InitTheme {
   active_text: string;
   font_size: string;
   font_family: string;
+  text_color_primary: string;
 }
 
 interface CustomTheme extends InitTheme {
   layout_color: string;
   background_color: string;
   border_color: string;
-  font_color_100: string;
-  font_color_200: string;
-  font_color_300: string;
+  text_color_body: string;
+  text_hover: string;
+  text_color_line_through: string;
+  text_color_filter: string;
   background_image_mobile: string;
   background_image_desktop: string;
 }
@@ -22,32 +24,35 @@ interface ThemesAvailable {
 
 const BasicTheme: InitTheme = {
   active_text: "rgb(30, 221, 239)",
-  font_size: "16px",
+  font_size: "1.5rem",
   font_family: "'Josefin Sans', sans-serif",
+  text_color_primary: "#fff", // Body
 };
 
 const LightTheme: CustomTheme = {
   ...BasicTheme,
-  layout_color: "rgb(239, 239, 239)",
-  background_color: "rgb(238, 235, 234)",
+  layout_color: "hsl(0, 0%, 98%)",
+  background_color: "hsl(236, 33%, 92%)",
   background_image_mobile: "./src/assets/background/bg-mobile-light.jpg",
   background_image_desktop: "./src/assets/background/bg-desktop-light.jpg",
-  border_color: "rgb(233, 235, 233)",
-  font_color_100: "rgb(119, 124, 127)", // Body
-  font_color_200: "rgb(238, 235, 234)", // line-through
-  font_color_300: "rgb(220, 184, 153)", // filter
+  border_color: "hsl(233, 11%, 84%)",
+  text_color_body: "hsl(235, 19%, 35%)", // Body
+  text_hover: "hsl(235, 19%, 35%)", // Text-hover
+  text_color_line_through: "hsl(233, 11%, 84%)", // line-through
+  text_color_filter: "hsl(236, 9%, 61%)", // filter
 };
 
 const DarkTheme: CustomTheme = {
   ...BasicTheme,
-  layout_color: "rgb(60, 62, 49)",
-  background_color: "rgb(29, 30, 28)",
+  layout_color: "hsl(235, 24%, 19%)",
+  background_color: "hsl(235, 21%, 11%)",
   background_image_mobile: "./src/assets/background/bg-mobile-dark.jpg",
   background_image_desktop: "./src/assets/background/bg-desktop-dark.jpg",
-  border_color: "rgb(88, 84, 80)",
-  font_color_100: "rgb(216, 219, 217)", // Body
-  font_color_200: "rgb(61, 66, 64)", // line-through
-  font_color_300: "rgb(132, 130, 128)", // filter
+  border_color: "hsl(233, 14%, 35%)",
+  text_color_body: "hsl(234, 11%, 52%)", // Body
+  text_hover: "hsl(236, 33%, 92%)", // Text-hover
+  text_color_line_through: "hsl(233, 14%, 35%)", // line-through
+  text_color_filter: "hsl(237, 14%, 26%)", // filter
 };
 
 const Themes: ThemesAvailable = {

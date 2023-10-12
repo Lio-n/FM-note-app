@@ -1,5 +1,5 @@
 import { useSwitchTheme } from "../../lib/hooks";
-import CONSTANTS from "../../test/constants.test";
+import CONSTANTS from "../../test/constants";
 import { MoonIcon } from "../../ui/atoms/icons/moon.icon";
 import { SunIcon } from "../../ui/atoms/icons/sun.icon";
 import toggleDataTheme from "../../utils/toggleDataTheme.utils";

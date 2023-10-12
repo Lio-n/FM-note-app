@@ -6,6 +6,13 @@ import { useGetSwitchTheme } from "./lib/hooks";
 
 const Main = styled.main`
   background-color: ${({ theme }) => theme.background_color};
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url(${({ theme }) => theme.background_image_mobile});
+
+  @media (min-width: 375px) {
+    background-image: url(${({ theme }) => theme.background_image_desktop});
+  }
 `;
 
 function App() {

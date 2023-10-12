@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { CheckIcon } from "../../atoms/icons/check.icon";
 
 const Root = styled.div`
-  height: 30px;
-  width: 30px;
+  height: 2rem;
+  width: 2rem;
 
   background: ${({ theme }) => theme.border_color};
   border-radius: 50%;
@@ -42,14 +42,14 @@ const Root = styled.div`
 `;
 
 interface CheckButtonProps {
-  isCompleted?: boolean;
+  isCompleted: boolean;
   ariaLabel?: string;
   onClick?: (any: unknown) => unknown;
 }
 
 export const CheckButton = ({ isCompleted = false, onClick, ariaLabel = `check button` }: CheckButtonProps) => (
-  <Root onClick={onClick} className={`${isCompleted && "completed"}`}>
-    <button aria-label={ariaLabel} className="circleButton">
+  <Root id="CheckButton"  className={`${isCompleted && "completed"}`}>
+    <button aria-label={ariaLabel} onClick={onClick} className="circleButton">
       {isCompleted && <CheckIcon />}
     </button>
   </Root>

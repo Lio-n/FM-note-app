@@ -13,6 +13,25 @@
 
   --clr-pink: hsl(280, 87%, 65%);
   --clr-sky-blue: hsl(192, 100%, 67%);
+
+  /* ### Light Theme */
+
+  --Very-Light-Gray: hsl(0, 0%, 98%); /* Layout */
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%); /* Background */
+  --Light-Grayish-Blue: hsl(233, 11%, 84%); /* Line-through */
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%); /* Filter */
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%); /* Body */
+  --Text-hover: hsl(235, 19%, 35%); /* Any */
+
+  /* ### Dark Theme */
+
+  --Very-Dark-Blue: hsl(235, 21%, 11%); /* Backgound */
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%); /* Layout */
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Text-hover: hsl(236, 33%, 92%); /* Any */
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%); /* Body */
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%); /* Line-through */
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%); /* Filter */
 }
 
 * {
