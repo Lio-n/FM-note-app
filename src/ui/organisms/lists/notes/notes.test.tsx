@@ -29,16 +29,19 @@ export default describe("Test BoxTodo component", () => {
   });
 
   it("New note should be deployed inside ListOfNotes.", () => {
-    notesMock.push({
+    const newNote = {
       id: "1",
       text: "Test note Two!",
       isCompleted: false,
-    });
+    }
 
-    appElem.rerender(<ListOfNotes data={notesMock} onCompleted={onCompleted} onRemove={onRemove}/>);
+    const newNotesMockState = [...notesMock, newNote];
+    
+    appElem.rerender(<ListOfNotes data={newNotesMockState} onCompleted={onCompleted} onRemove={onRemove}/>);
+    listOfNotesElem = appElem.getByTestId(TEST_ID_LIST_OF_NOTES);
 
-    const cardNoteElem = listOfNotesElem.querySelector(`li[id="${notesMock[1].id}"]`)?.querySelector("div");
-    expect(cardNoteElem?.textContent).toBe(notesMock[1].text);
+    const cardNoteElem = listOfNotesElem.querySelector(`li[id="${newNotesMockState[1].id}"]`)?.querySelector("div");
+    expect(cardNoteElem?.textContent).toBe(newNotesMockState[1].text);
   });
 
   it("Should check note as completed.", () => {
@@ -78,6 +81,6 @@ export default describe("Test BoxTodo component", () => {
 
     appElem.rerender(<ListOfNotes data={newNotesMockState} onCompleted={onCompleted} onRemove={onRemove}/>);
 
-    expect(newNotesMockState.length).toBe(1);
+    expect(newNotesMockState.length).toBe(0);
   }); 
 });

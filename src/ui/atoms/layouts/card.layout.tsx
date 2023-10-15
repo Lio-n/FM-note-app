@@ -4,6 +4,7 @@ const CardLayout = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  
   padding: 1rem 1.5rem;
   border-radius: 5px;
   background-color: ${({ theme }) => theme.layout_color};

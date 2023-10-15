@@ -14,8 +14,8 @@ const Root = styled.div`
   .circleButton {
     border-radius: 50%;
     border: none;
-    width: 85%;
-    height: 85%;
+    width: 88%;
+    height: 88%;
     cursor: pointer;
 
     position: absolute;
