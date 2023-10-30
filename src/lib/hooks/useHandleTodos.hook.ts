@@ -1,6 +1,7 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useNotes } from ".";
 import { NoteData } from "../../ui/molecules/cards/note.card";
+import { getLocalStorage, persistLocalStorage } from "../../utils/localStorage.utils";
 
 interface useHandleTodosReturn {
   data: NoteData[];
@@ -12,10 +13,16 @@ interface useHandleTodosReturn {
 const useHandleTodos = (): useHandleTodosReturn => {
   const [data, setData] = useNotes();
 
+  useEffect(() => {
+    const noteDataStored = getLocalStorage("noteKey");
+    noteDataStored && setData(noteDataStored);
+  }, []);
+
   const handleOnRemove = useCallback(
     (id: string) => {
       const newNotesState = data.filter((i) => i.id !== id);
       setData([...newNotesState]);
+      persistLocalStorage("noteKey", [...newNotesState]);
     },
     [data, setData]
   );
@@ -23,6 +30,7 @@ const useHandleTodos = (): useHandleTodosReturn => {
   const handleOnRemoveCompleted = useCallback(() => {
     const newNotesState = data.filter((i) => i.isCompleted === false);
     setData([...newNotesState]);
+    persistLocalStorage("noteKey", [...newNotesState]);
   }, [data, setData]);
 
   const handleOnCompleted = useCallback(
@@ -36,6 +44,7 @@ const useHandleTodos = (): useHandleTodosReturn => {
       ];
 
       setData([...newNotesState]);
+      persistLocalStorage("noteKey", [...newNotesState]);
     },
     [data, setData]
   );
