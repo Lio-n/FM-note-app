@@ -65,7 +65,7 @@ Your users should be able to:
 - [Styled Compotents](https://styled-components.com/) - For styles
 - [React](https://reactjs.org/) - JS library
 - [Vite](https://vitejs.dev/)
-- [Vitets](https://vitest.dev/) - For Testing
+- [Vitest](https://vitest.dev/) - For Testing
 
 ### What I learned
 
