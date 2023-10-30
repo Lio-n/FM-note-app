@@ -11,6 +11,16 @@ const Root = styled(CardLayout)`
     display: flex;
     gap: 1rem;
   }
+
+  p {
+    width: fit-content;
+  }
+
+  &:hover {
+    p {
+      color: ${({ theme }) => theme.text_hover};
+    }
+  }
 `;
 
 interface NoteData {
@@ -30,7 +40,7 @@ const NoteCard = ({ data, onCompleted, onRemove }: NoteCardProps) => {
     <Root>
       <div className="card_content">
         <CheckButton onClick={() => onCompleted(data.id)} isCompleted={data.isCompleted} ariaLabel={"Button : Complete note."} />
-        <Body children={data.text} className={`${data.isCompleted ? "--line-through" : "--body-color"}`} />
+        <Body children={data.text} className={`--hover-color ${data.isCompleted ? "--line-through" : "--body-color"}`} />
       </div>
       <CrossButton onClick={() => onRemove(data.id)} />
     </Root>

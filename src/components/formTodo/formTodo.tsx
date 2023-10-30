@@ -23,7 +23,7 @@ const FormTodo = () => {
 
   return (
     <form data-testid={CONSTANTS.COMPONENT.TODO_FORM.TEST_ID_TODO_FORM} onSubmit={handleSubmit}>
-      <CardLayout>
+      <CardLayout className="--box-shadow">
         <CircleButton type="submit" ariaLabel={"Submit button"} />
         <Input name="text" required placeholder="Create a new todo..." />
       </CardLayout>
